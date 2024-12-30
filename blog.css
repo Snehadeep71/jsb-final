@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+/* Styling for the blog section */
+.blog-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    padding: 20px;
+    /* background-color: #D6CFC9; */
+    background: url(images/iv4.jpg) no-repeat center center ;
+    background-size: cover;
+}
+
+/* Styling for each blog box */
+.blog-box {
+    width: 30%;
+    background-color: #F5F3F0;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 14px 7px 5px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    padding-bottom: 15px;
+    box-sizing: border-box;
+   
+}
+
+/* Image styling */
+.blog-box img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Heading styling */
+.blog-box h3 {
+    padding: 15px;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+/* Blog text styling */
+.blog-box .blog-text {
+    padding: 0 15px 15px;
+    font-size: 1rem;
+    color: #666;
+    max-height: 120px; /* Show a limited number of lines initially */
+    overflow: hidden;
+    line-height: 1.6;
+    margin: 10px 0px;
+}
+
+/* Read More button styling */
+.blog-box .read-more {
+    display: block;
+    margin: 30px 0;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: #2C6E49;
+    color: #F4E1D2;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    width: 60%;
+    margin: 0 auto;
+}
+
+.blog-box .read-more:hover {
+    background-color: #e05c4f;
+    transition: all 0.3s;
+}
+
+/* Flexibility for blog box when paragraph expands */
+.blog-box.expanded {
+    height: auto;
+}
+
+.blog-box.expanded .blog-text {
+    max-height: none;
+}
+/*-----------------blog-section responsive css starts here------------- */
+@media only screen and (min-width:200px) and (max-width:1336px){
+    .blog-section{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+    .blog-box{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+        height: auto;
+    }
+}
+/*-----------------blog-section responsive css ends here------------- */
+

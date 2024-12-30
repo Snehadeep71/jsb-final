@@ -1,0 +1,312 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*---------------------product section 001 starts here----------------*/
+.psec-001{
+    width: 100%;
+    height: 100vh;
+     margin: auto auto; 
+     display: flex; 
+     flex-direction: column; 
+    background: url(images/about-section-bcg.png) center center/cover no-repeat;
+    position: relative;
+    z-index: 1;
+}
+.productcontent{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    z-index: 2;
+    align-items: center;
+    height: 100%;
+    /* border: 2px solid red; */
+}
+.jutecontent,.cottoncontent{
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    height: 100%;
+    max-height: 300px;
+    border: 2px solid white;
+    z-index: 100;
+    overflow: hidden; 
+    
+}
+/* Overlay - initially hidden */
+.jutecontent .overlay,.cottoncontent .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Dark semi-transparent background */
+    z-index: 1;
+    transform: translateY(100%);  /* Initially hide it by translating it down */
+    transition: transform 0.5s ease; /* Smooth animation when hovering */
+}
+
+/* Content (h2 and paragraph) */
+.jutecontent h2,.cottoncontent h2 {
+    position: absolute;
+    top: 50%;  /* Initially position in the middle of the box */
+    left: 35%;
+    color: #FF6F61;
+    z-index: 2;
+    transform: translateY(-50%);
+    transition: transform 0.5s ease; /* Smooth transition for h2 */
+}
+
+/* Image styles */
+.jutecontent img,.cottoncontent img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  
+}
+
+
+.jutecontent .description,.cottoncontent .description {
+    position: absolute;
+    top: 50%;  
+    left: 10px;
+    color: white;
+    z-index: 3;
+    display: none; 
+    font-size: 14px;
+    max-width: 80%;
+    transform: translateX(50%); 
+    opacity: 0; 
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+
+.jutecontent:hover .overlay,.cottoncontent:hover .overlay {
+    transform: translateY(0);  
+}
+
+.jutecontent:hover h2,.cottoncontent:hover h2 {
+    transform: translateY(-500%); 
+}
+
+.jutecontent:hover .description,.cottoncontent:hover .description {
+    display: block;  
+    transform: translateX(10%); 
+    opacity: 1; 
+}
+.jutecontent img,.cottoncontent img{
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+
+
+.psec-001 h1{
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #2C6E49;
+    
+    margin: auto auto;
+    top: 50%;
+    z-index: 10;
+
+}
+/*--------------------------section psec-001 responsive css starts here-------------*/
+@media only screen and (min-width:200px) and (max-width:1336px){
+    .psec-001{
+        width: 100%;
+        height: auto;
+        align-items: center;
+        text-align: center;
+    }
+    .productcontent{
+        display: flex;
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+    .jutecontent,.cottoncontent{
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+    }
+    .jutecontent h2,.cottoncontent h2{
+        text-align: center;
+        margin: 0 auto;
+        align-items: center;
+    }
+}
+/*--------------------------section psec-001 responsive css ends here-------------*/
+/*---------------------product section 001 ends here----------------*/
+/*---------------------product section 1 starts here----------------*/
+.psec-01{
+    width: 100%;
+    height: auto;
+    align-items: center;
+    text-align: center;
+    /* background-color: #D6CFC9; */
+    background: url(images/iv6.jpg) no-repeat center center;
+    background-size: cover;
+}
+.productcategoryleft {
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between;
+    width: 100%;
+    max-width: 40%; 
+    height: auto; 
+    margin: 0 auto;
+}
+.products {
+    display: flex;
+    /* justify-content: space-between; */
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    padding: 30px 0;
+    box-sizing: border-box;
+    margin: 0 auto;
+    
+}
+
+
+.products:hover {
+    cursor: pointer;
+}
+
+
+.productcategoryleft ul li {
+    padding: 10px 0;
+    box-sizing: border-box;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.productcategoryleft ul li:hover {
+    cursor: pointer;
+}
+
+.productsdemoright {
+    display: flex;
+    width: 100%;
+    max-width: 80%;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+.product1 {
+    flex: 0 0 calc(30% - 20px); 
+    box-sizing: border-box;
+    margin: 10px; 
+    width: 200px;
+    height: 300px; 
+    padding: 20px 20px;
+    box-sizing: border-box;
+    
+    
+}
+.product1 a {
+    text-decoration: none; /* Remove underline */
+}
+.product1 p{
+    background-color: #F4E1D2;
+    color: #FF6F61;
+    font-weight: bold;
+    text-decoration: none;
+    list-style: none;
+    border: none;
+    padding: 10px;
+    border-radius: 20px;
+}
+.product1 p:hover{
+    color:#F4E1D2;
+    background-color: #2C6E49;
+    transition: all 0.4s;
+}
+.product1:hover{
+    transform: scale(1.02);
+    transition: all 0.4s;
+    position: relative;
+   
+}
+.product1 img {
+    width: 100%;
+    height: 100%; 
+    object-fit: cover; 
+    border-radius: 20px;
+    
+}
+.bags {
+    padding: 20px;
+    margin-top: 10px;
+    cursor: pointer; 
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #000;
+    border: 2px solid rgb(169, 169, 169);
+    border-radius: 15px;
+}
+
+.bags:hover {
+    background-color: #2C6E49; 
+    color: #FF6F61;
+    transition: all 0.3s;
+}
+/*-------------------------product section 2 responsive css starts here----------*/
+@media only screen and (min-width:200px) and (max-width:1336px){
+    .psec-01{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 100%;
+        height: auto;
+
+    }
+    .products{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+    }
+    .productcategoryleft {
+        flex-direction: row; 
+        align-items: center; 
+       text-align: center;
+
+    }
+
+    .bags {
+        margin-bottom: 10px; /* Add some space between stacked items */
+    }
+    .productsdemoright{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+    }
+    .product1 img{
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+    .product1{
+        width: 100%;
+        height: 100%;
+        max-width: 100%;
+    }
+}
+/*-------------------------product section 2 responsive css ends here----------*/
+/*---------------------product section 1 ends here----------------*/
+
+
+.product1 {
+    margin: 10px;
+    display: inline-block;
+}
